@@ -1,0 +1,99 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #10203c, #224279, #336fa3, #0c9299);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+nav {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12px;
+}
+
+nav a {
+    color: aliceblue;
+    margin: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    box-shadow: 0 12px 25px rgba(250, 235, 215, 0.9);
+}
+
+section {
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.projects-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    font-family: cursive;
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color:antiquewhite;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(250, 235, 215, 0.9);
+}
+
+.about-trigger {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about-card {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -20px);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.about-trigger:hover .about-card {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+    box-shadow: 0 12px 25px rgba(250, 235, 215, 0.9);
+}
+
+.about-card p {
+    color: white;
+    line-height: 1.6;
+}
+
+.message {
+    margin-top: 15px;
+    font-family: cursive;
+    font-style: italic;
+    color: lavenderblush;
+}
